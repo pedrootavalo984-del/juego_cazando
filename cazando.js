@@ -48,14 +48,22 @@ function iniciarJuego(){
     graficarGato()
     graficarComida()
  }
+ function moverDerecha(){
+    gatoX += 10
+    limpiarCanva()
+    graficarGato()
+    graficarComida()
+ }
+ function moverArriba(){
+    gatoY -= 10
+    limpiarCanva()
+    graficarGato()
+    graficarComida()
+ }
+ function moverAbajo(){
+    gatoY += 10
+    limpiarCanva()
+    graficarGato()
+    graficarComida()
+ }
 
-/*/
-2. 
- Probar funcionamiento.
- Realizar commit y push.
-3. Aplicar la misma lógica para crear:
-• moverDerecha
-• moverArriba
-• moverAbajo
- Una vez que el gato se mueva en todas las direcciones:
- Realizar commit y */
