@@ -18,9 +18,10 @@ function graficarRectangulo(x,y,ancho,alto,color){
 }
  
 
+gatoX = canvas.width / 2 - ANCHO_GATO / 2;
+gatoY = canvas.height /2 - ALTO_GATO /2 ;
+
 function graficarGato(){
-    gatoX = canvas.width / 2 - ANCHO_GATO / 2;
-    gatoY = canvas.height /2 - ALTO_GATO /2 ;
     graficarRectangulo(gatoX,gatoY,ANCHO_GATO,ALTO_GATO,"#0b49e8");
 }
 
@@ -37,4 +38,24 @@ function iniciarJuego(){
     graficarComida();
 }
 
+ function limpiarCanva (){
+    ctx.clearRect(0,0,canvas.width, canvas.height)
+ }
 
+ function moverIzquierda(){
+    gatoX -= 10
+    limpiarCanva()
+    graficarGato()
+    graficarComida()
+ }
+
+/*/
+2. 
+ Probar funcionamiento.
+ Realizar commit y push.
+3. Aplicar la misma lógica para crear:
+• moverDerecha
+• moverArriba
+• moverAbajo
+ Una vez que el gato se mueva en todas las direcciones:
+ Realizar commit y */
