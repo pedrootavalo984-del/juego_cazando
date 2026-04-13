@@ -36,6 +36,7 @@ function graficarComida(){
 function iniciarJuego(){
     graficarGato();
     graficarComida();
+    detectarColision()
 }
 
  function limpiarCanva (){
@@ -47,23 +48,35 @@ function iniciarJuego(){
     limpiarCanva()
     graficarGato()
     graficarComida()
+    detectarColision()
  }
+
  function moverDerecha(){
     gatoX += 10
     limpiarCanva()
     graficarGato()
     graficarComida()
+    detectarColision()
  }
  function moverArriba(){
     gatoY -= 10
     limpiarCanva()
     graficarGato()
     graficarComida()
+   detectarColision()
  }
  function moverAbajo(){
     gatoY += 10
     limpiarCanva()
     graficarGato()
     graficarComida()
+    detectarColision()
+   
  }
 
+function detectarColision(){
+    if(gatoX + ANCHO_GATO > comidaX && gatoX < comidaX + ANCHO_COMIDA && gatoY + ALTO_GATO > comidaY && gatoY < comidaY - ALTO_COMIDA
+     ){
+        alert("GatoTragon")
+    }
+}
